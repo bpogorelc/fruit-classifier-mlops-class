@@ -1,6 +1,6 @@
 import os
 import wandb
-from loadotenv import load_env # removed in GCP deployment
+#from loadotenv import load_env # removed in GCP deployment
 from pathlib import Path
 import torch
 from torchvision.models import resnet18, ResNet
@@ -18,11 +18,11 @@ from torchvision.transforms import v2 as transforms
 MODELS_DIR = 'models'
 MODEL_FILE_NAME = 'best_model.pth'
 
-CATEGORIES = ["freshapple", "freshbanana", "freshoranges", 
-              "rottenapple", "rottenbanana", "rottenoranges"]
+CATEGORIES = ["freshapple", "freshbanana", "freshorange", 
+              "rottenapple", "rottenbanana", "rottenorange"]
 
 
-load_env() # This will be removed for the GCP deployment
+#load_env() # This will be removed for the GCP deployment
 wandb_api_key = os.environ.get('WANDB_API_KEY')
 
 MODELS_DIR = 'models'
